@@ -27,7 +27,7 @@ const renderBody = (item, index) => (
 
 export default function Customers() {
   return (
-    <div>
+    <div className="container">
       <h2 className="page-header">customers</h2>
       <div className="row">
         <div className="col-12">

@@ -46,10 +46,10 @@ export default function Dashboard() {
   const themeReducer = useSelector((state) => state.themeReducer.mode);
 
   return (
-    <>
+    <div className="container">
       <h1 className="page-header">Dashboard</h1>
       <div className="row">
-        <div className="col-6">
+        <div className="col-6  col-md-8">
           <div className="row">
             {statusData.map((item, index) => (
               <div className="col-6" key={index}>
@@ -62,7 +62,7 @@ export default function Dashboard() {
             ))}
           </div>
         </div>
-        <div className="col-6">
+        <div className="col-6 col-md-4">
           <div className="card full-height">
             <Chart
               options={
@@ -82,6 +82,9 @@ export default function Dashboard() {
             />
           </div>
         </div>
+      </div>
+
+      <div className="row">
         <div className="col-4">
           <div className="card">
             <div className="card_header">
@@ -120,6 +123,6 @@ export default function Dashboard() {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 }
