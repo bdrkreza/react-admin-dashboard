@@ -4,6 +4,7 @@ import user_image from "../../assets/images/profile.jpg";
 import notifications from "../../assets/JsonData/notification.json";
 import user_menu from "../../assets/JsonData/user_menus.json";
 import Dropdown from "../Dropdown/Dropdown";
+import ThemeSetting from "../ThemeSetting/ThemeSetting";
 import "./TopNavbar.css";
 
 const curr_user = {
@@ -62,7 +63,10 @@ export default function TopNavbar() {
             renderFooter={() => <Link to="/">View All</Link>}
           />
         </div>
-        <div className="topnav__right-item">{/* top Menu item */}</div>
+        <div className="topnav__right-item">
+          {/* top Menu item */}
+          <ThemeSetting />
+        </div>
       </div>
     </div>
   );
